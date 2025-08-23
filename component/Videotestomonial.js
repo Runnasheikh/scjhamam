@@ -42,7 +42,7 @@ const VideoTestimonial = () => {
               alt="Scjha"
               width={60}
               height={60}
-              className="rounded-full"
+              // className="rounded-full"
             />
             <p className="mt-3 font-semibold">Scjha</p>
           </div>

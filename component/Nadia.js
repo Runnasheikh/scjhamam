@@ -2,11 +2,12 @@
 import { useMemo, useState } from "react";
 import Head from "next/head";
 import { motion, AnimatePresence } from "framer-motion";
-import { FaFacebookF, FaInstagram, FaLinkedinIn, FaXTwitter } from "react-icons/fa6";
+import { FaFacebookF, FaInstagram, FaYoutube } from "react-icons/fa";
+import { SiSpotify } from "react-icons/si";
 import { HiMenu, HiX } from "react-icons/hi"; 
+import Link from "next/link";
 import React from "react";
 import Carousel from "./Carousel"; 
-import Link from "next/link";
 import { usePathname } from "next/navigation";
 
 const Nadia = () => {
@@ -26,24 +27,24 @@ const Nadia = () => {
     { name: "Contact", path: "/contact" },
   ];
 
-  // Framer Motion variants for staggered menu items
   const menuVariants = {
-  hidden: { opacity: 0, y: -20 },
-  visible: (i) => ({  // ✅ removed ": number"
-    opacity: 1,
-    y: 0,
-    transition: { delay: i * 0.08 },
-  }),
-};
+    hidden: { opacity: 0, y: -20 },
+    visible: (i) => ({
+      opacity: 1,
+      y: 0,
+      transition: { delay: i * 0.08 },
+    }),
+  };
 
   return (
     <>
       <Head>
+        
         <title>Scjha — Captivating Female International Star</title>
         <meta name="viewport" content="width=device-width, initial-scale=1" />
       </Head>
 
-      <main className="min-h-screen bg-background text-foreground selection:bg-black/80 selection:text-white">
+      <main className="pb-4  bg-transparent  text-foreground selection:bg-black/80 selection:text-white">
         {/* Navbar */}
         <header className="sticky top-0 z-50 backdrop-blur bg-white/60 border-b">
           <nav className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 h-14 flex items-center justify-between">
@@ -51,7 +52,7 @@ const Nadia = () => {
               <div className="h-8 w-8 rounded-full bg-black text-white grid place-items-center font-black">
                 Scjha
               </div>
-              <span className="font-semibold tracking-wide">Scjha</span>
+              {/* <span className="font-semibold tracking-wide">Scjha</span> */}
             </div>
 
             {/* Desktop links */}
@@ -72,10 +73,37 @@ const Nadia = () => {
 
             {/* Social icons always visible */}
             <div className="flex items-center space-x-4 text-xl text-black">
-              <FaFacebookF className="cursor-pointer hover:text-gray-600" />
-              <FaInstagram className="cursor-pointer hover:text-gray-600" />
-              <FaLinkedinIn className="cursor-pointer hover:text-gray-600" />
-              <FaXTwitter className="cursor-pointer hover:text-gray-600" />
+              <a
+                href="https://www.facebook.com/yourfacebookpage"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <FaFacebookF className="cursor-pointer hover:text-gray-600" />
+              </a>
+
+              <a
+                href="https://www.instagram.com/soni_scjhaofficial/?igsh=cDJ5MmJ1eXh5bXk5&utm_source=qr#"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <FaInstagram className="cursor-pointer hover:text-gray-600" />
+              </a>
+
+              <a
+                href="https://www.youtube.com/@sonichoudharyjha"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <FaYoutube className="cursor-pointer hover:text-gray-600" />
+              </a>
+
+              <a
+                href="https://open.spotify.com/artist/yourspotifyid"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <SiSpotify className="cursor-pointer hover:text-gray-600" />
+              </a>
             </div>
 
             {/* Hamburger for mobile */}
@@ -143,10 +171,22 @@ const Nadia = () => {
               </p>
               <div className="flex justify-center space-x-6 mt-4">
                 <button className="px-6 py-2 border border-white rounded-full hover:bg-white hover:text-black transition">
-                  View
+                   <a
+                href="https://www.instagram.com/soni_scjhaofficial/?igsh=cDJ5MmJ1eXh5bXk5&utm_source=qr#"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                view
+              </a>
                 </button>
                 <button className="px-6 py-2 border border-white rounded-full hover:bg-white hover:text-black transition">
-                  Listen
+                    <a
+                href="https://www.youtube.com/watch?v=Tk0yIUnVNkw"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Listen
+              </a>
                 </button>
               </div>
             </motion.div>

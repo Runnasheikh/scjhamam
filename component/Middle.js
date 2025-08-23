@@ -5,29 +5,24 @@ import Image from "next/image";
 
 const sections = [
   { title: "Upcoming Concert", id: "concert" },
-  { title: "Successful Event", id: "event" },
   { title: "Featured Projects", id: "projects" },
-  // { title: "Gallery Highlights", id: "gallery" },
-  // { title: "Vocal Journey", id: "vocal" },
-  // { title: "Experience", id: "experience" },
 ];
 
-// Images for Event
 const eventImages = ["/jha2.jpg", "/jha3.jpg"];
 
 export default function Middle() {
   return (
-    <div className="space-y-24 bg-white">
+    <div className="space-y-24 bg-transparent">
       {/* Hero Section */}
       <motion.section
         initial={{ x: "-100%" }}
         animate={{ x: 0 }}
         transition={{ duration: 0.8 }}
-        className="text-black bg-white py-16 px-8 flex flex-col md:flex-row items-center gap-8 w-4/5 mx-auto rounded-lg shadow"
+        className="text-white py-16 pb-20 px-8 flex flex-col md:flex-row items-center justify-center gap-8 w-11/12 mx-auto shadow-none"
       >
-        <div className="md:w-1/2">
-          <h1 className="text-4xl font-bold mb-4">A Rising Star: Scjha</h1>
-          <p>
+        <div className="md:w-1/2 text-center md:text-center flex flex-col justify-center">
+          <h1 className="text-4xl sm:text-5xl font-bold mb-6">A Rising Star: Scjha</h1>
+          <p className="text-base sm:text-lg">
             Soni Choudhary Jha is an accomplished playback singer and live performer
             with over five years of experience in both learning and performing music. She
             has showcased her talent as a live performer in more than eight states,
@@ -40,7 +35,7 @@ export default function Middle() {
             after artist in the industry
           </p>
         </div>
-        <div className="md:w-1/2">
+        <div className="md:w-1/2 flex justify-center">
           <Image
             src="/jha2.jpg"
             alt="Scjha"
@@ -59,9 +54,7 @@ export default function Middle() {
           whileInView={{ y: 0, opacity: 1 }}
           transition={{ duration: 0.8 }}
           viewport={{ once: true }}
-          className={`py-16 px-8 rounded-lg text-black shadow-lg w-4/5 mx-auto ${
-            section.id === "concert" ? "bg-white" : "bg-gray-50"
-          }`}
+          className={`py-16 px-8 rounded-lg text-white shadow-none w-11/12 mx-auto`}
         >
           <h2 className="text-3xl font-semibold mb-6 text-center">{section.title}</h2>
 
@@ -78,31 +71,10 @@ export default function Middle() {
             </div>
           )}
 
-          {/* Successful Event */}
-          {section.id === "event" && (
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-              {eventImages.map((img, i) => (
-                <div
-                  key={i}
-                  className="bg-white rounded-lg shadow p-4 h-64 flex items-center justify-center"
-                >
-                  <Image
-                    src={img}
-                    alt={`Event ${i + 1}`}
-                    width={500}
-                    height={500}
-                    className="rounded-lg object-cover w-full h-full"
-                  />
-                </div>
-              ))}
-            </div>
-          )}
-
           {/* Featured Projects */}
           {section.id === "projects" && (
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-              {/* Row 1 - YouTube Videos */}
-              <div className="bg-white rounded-lg shadow p-4 h-64 flex items-center justify-center overflow-hidden">
+              <div className="rounded-lg h-64 flex items-center justify-center overflow-hidden">
                 <iframe
                   className="w-full h-full rounded-lg"
                   src="https://www.youtube.com/embed/O73TZ-wJbg0?autoplay=1&mute=1"
@@ -113,7 +85,7 @@ export default function Middle() {
                 ></iframe>
               </div>
 
-              <div className="bg-white rounded-lg shadow p-4 h-64 flex items-center justify-center overflow-hidden">
+              <div className="rounded-lg h-64 flex items-center justify-center overflow-hidden">
                 <iframe
                   className="w-full h-full rounded-lg"
                   src="https://www.youtube.com/embed/mSyqtNyxOlI?autoplay=1&mute=1"
@@ -124,8 +96,7 @@ export default function Middle() {
                 ></iframe>
               </div>
 
-              {/* Row 2 - Images */}
-              <div className="bg-white rounded-lg shadow p-4 h-64 flex items-center justify-center">
+              <div className="rounded-lg h-64 flex items-center justify-center">
                 <Image
                   src="/jha4.jpg"
                   alt="Project 3"
@@ -135,7 +106,7 @@ export default function Middle() {
                 />
               </div>
 
-              <div className="bg-white rounded-lg shadow p-4 h-64 flex items-center justify-center">
+              <div className="rounded-lg h-64 flex items-center justify-center">
                 <Image
                   src="/jha5.png"
                   alt="Project 4"
@@ -146,30 +117,9 @@ export default function Middle() {
               </div>
             </div>
           )}
-
-          {/* Other Sections */}
-          {/* {section.id !== "concert" &&
-            section.id !== "event" &&
-            section.id !== "projects" && (
-              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-                {[1, 2, 3, 4].map((i) => (
-                  <div
-                    key={i}
-                    className="bg-white rounded-lg shadow p-4 h-64 flex items-center justify-center"
-                  >
-                    <Image
-                      src="/jha2.jpg"
-                      alt="Scjha"
-                      width={500}
-                      height={500}
-                      className="rounded-lg object-cover w-full h-full"
-                    />
-                  </div>
-                ))}
-              </div>
-            )} */}
         </motion.section>
       ))}
     </div>
   );
 }
+ 

@@ -6,6 +6,7 @@ import Nadia from "@/component/Nadia";
 import Nav from "@/component/Nav";
 import VideoTestimonial from "@/component/Videotestomonial";
 import Image from "next/image";
+import AboutPage from "./about/page";
 
 
 export default function Home() {
@@ -18,6 +19,7 @@ export default function Home() {
 <Gallery/>
 <AboutSection/>
 <VideoTestimonial/>
+<AboutPage/>
 <Footer/>
 </div>
 );
