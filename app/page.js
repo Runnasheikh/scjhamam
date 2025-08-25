@@ -7,10 +7,9 @@ import Hero from "@/component/Hero";
 import Concert from "@/component/Concert";
 import Projects from "@/component/Projects";
 import Gallery from "@/component/Gallery";
-import AboutSection from "@/component/Aboutaction";
-import VideoTestimonial from "@/component/Videotestomonial";
-import AboutPage from "./about/page";
+
 import Footer from "@/component/Footer";
+import About2 from "@/component/About2";
 
 export default function Home() {
   // Ref for YoutubePlaylist
@@ -38,8 +37,9 @@ export default function Home() {
       <Projects />
       <Gallery />
       {/* <AboutSection /> */}
-      <VideoTestimonial />
-      <AboutPage />
+      
+      {/* <AboutPage /> */}
+      <About2/>
       <Footer />
     </div>
   );

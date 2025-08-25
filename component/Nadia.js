@@ -29,7 +29,7 @@ const Nadia = ({ scrollToYoutube }) => {
     { name: "Portfolio", path: "/portfolio" },
     { name: "India Tour", path: "/India-tour" },
     { name: "About", path: "/about" },
-    { name: "Contact", path: "/contact" },
+    { name: "Contact", path: "/contactme" },
   ];
 
   const menuVariants = {
@@ -85,7 +85,7 @@ const Nadia = ({ scrollToYoutube }) => {
               <a href="https://www.youtube.com/@sonichoudharyjha" target="_blank" rel="noopener noreferrer">
                 <FaYoutube className="cursor-pointer hover:text-gray-600" />
               </a>
-              <a href="https://open.spotify.com/artist/yourspotifyid" target="_blank" rel="noopener noreferrer">
+              <a href="http://open.spotify.com/artist/2j2fBasWl9E4SRsvAWbT8d?si=B0tRt5jfR5O96jo22f0xtg" target="_blank" rel="noopener noreferrer">
                 <SiSpotify className="cursor-pointer hover:text-gray-600" />
               </a>
             </div>

@@ -7,10 +7,10 @@ import VideoTestimonial from "@/component/Videotestomonial";
 import Image from "next/image";
 import Link from "next/link";
 
-export default function AboutPage() {
+export default function About2() {
   return (
     <>
-    <Navbar/>
+    {/* <Navbar/> */}
     <main className="min-h-screen bg-gradient-to-br from-gray-900 via-black to-gray-800 text-white px-6 py-12 font-serif">
       {/* Hero Section */}
       <section className="flex flex-col items-center text-center">
@@ -140,8 +140,8 @@ export default function AboutPage() {
         </div>
       </section>
     </main>
-    {/* <VideoTestimonial/> */}
-    <Footer/>
+    <VideoTestimonial/>
+    {/* <Footer/> */}
     </>
   );
 }
