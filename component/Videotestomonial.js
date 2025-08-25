@@ -2,19 +2,19 @@ import Image from "next/image";
 
 const reviews = [
   {
-    name: "kunal",
+    name: "Kunal",
     text: "Scjha's voice is mesmerizing! Her portfolio showcases her talent beautifully against a stunning dark backdrop.",
-   
+    image: "/reviewer1.jpg", // replace with actual image or keep empty
   },
   {
     name: "Amit",
     text: "Absolutely phenomenal! The energy and emotion in the performance are unmatched.",
-   
+    image: "", // ❌ empty string (will fallback)
   },
   {
     name: "Priya",
     text: "A true artist! Every song is delivered with passion and finesse. Highly recommend watching her performances.",
-    
+    image: "/reviewer3.jpg",
   },
 ];
 
@@ -44,7 +44,7 @@ const VideoTestimonial = () => {
             {/* Reviewer */}
             <div className="flex flex-col items-center">
               <Image
-                src={review.image}
+                src={review.image || "/default-avatar.png"} // ✅ fallback image
                 alt={review.name}
                 width={60}
                 height={60}
