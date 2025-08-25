@@ -10,7 +10,7 @@ export default function Projects() {
       whileInView={{ y: 0, opacity: 1 }}
       transition={{ duration: 0.8 }}
       viewport={{ once: true }}
-      className="py-16 px-8 rounded-lg text-white w-11/12 mx-auto"
+      className="py-4 px-8 rounded-lg text-white w-11/12 mx-auto"
     >
       <h2 className="text-3xl font-semibold mb-6 text-center">Featured Projects</h2>
       <div className="grid grid-cols-1 md:grid-cols-2 gap-6">

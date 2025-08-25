@@ -23,22 +23,24 @@ export default function Concert() {
       whileInView={{ y: 0, opacity: 1 }}
       transition={{ duration: 0.8 }}
       viewport={{ once: true }}
-      className="py-16 px-8 rounded-lg text-black w-11/12 mx-auto"
+      className="py-8 px-8 rounded-lg text-black w-11/12 mx-auto"
     >
-      <h2 className="text-3xl font-semibold mb-6 text-center">Upcoming Concert</h2>
+      <h2 className="text-3xl font-semibold mb-6 text-center text-white">
+        Upcoming Concert
+      </h2>
 
       <Swiper
-        modules={[Navigation, Pagination]} // ✅ Add this
+        modules={[Navigation, Pagination]}
         spaceBetween={20}
-        slidesPerView={3} 
+        slidesPerView={1} // default → mobile = 1 slide
         navigation
         pagination={{ clickable: true }}
         breakpoints={{
-          640: { slidesPerView: 1 },
-          768: { slidesPerView: 2 },
-          1024: { slidesPerView: 3 },
+          640: { slidesPerView: 1 }, // phones
+          768: { slidesPerView: 2 }, // tablets
+          1024: { slidesPerView: 3 }, // desktops
         }}
-        loop={true} // optional: infinite loop
+        loop={true}
       >
         {images.map((src, index) => (
           <SwiperSlide key={index}>

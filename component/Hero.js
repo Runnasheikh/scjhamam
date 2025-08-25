@@ -9,7 +9,7 @@ export default function Hero() {
       initial={{ x: "-100%" }}
       animate={{ x: 0 }}
       transition={{ duration: 0.8 }}
-      className="text-black py-16 px-8 w-11/12 mx-auto mb-12" // <-- added mb-12
+      className="text-white py-4 px-8 w-11/12 mx-auto mb-8" // <-- added mb-12
     >
       {/* Heading at the top */}
       <h1 className="text-4xl sm:text-5xl font-bold mb-8 text-center md:text-left ">
