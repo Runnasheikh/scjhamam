@@ -44,7 +44,7 @@ const Nadia = ({ scrollToYoutube }) => {
   return (
     <>
       <Head>
-        <title>Scjha — Captivating Female International Star</title>
+        <title>Scjha — Captivating Rising Star</title>
         <meta name="viewport" content="width=device-width, initial-scale=1" />
       </Head>
 
