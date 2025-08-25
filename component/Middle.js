@@ -8,7 +8,7 @@ const sections = [
   { title: "Featured Projects", id: "projects" },
 ];
 
-const eventImages = ["/jha2.jpg", "/jha3.jpg"];
+const eventImages = ["/jha6.jpg", "/jha3.jpg"];
 
 export default function Middle() {
   return (
@@ -37,7 +37,7 @@ export default function Middle() {
         </div>
         <div className="md:w-1/2 flex justify-center">
           <Image
-            src="/jha2.jpg"
+            src="/jha6.jpg"
             alt="Scjha"
             width={700}
             height={700}
@@ -45,7 +45,7 @@ export default function Middle() {
           />
         </div>
       </motion.section>
-
+  
       {/* Sections */}
       {sections.map((section) => (
         <motion.section
@@ -62,7 +62,7 @@ export default function Middle() {
           {section.id === "concert" && (
             <div className="flex justify-center items-center h-[60vh]">
               <Image
-                src="/jha2.jpg"
+                src="/jha10.jpg"
                 alt="Upcoming Concert"
                 width={1200}
                 height={800}

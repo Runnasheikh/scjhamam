@@ -21,7 +21,7 @@
 
 
 body {
-  background: url('/dj.jpg') no-repeat center center fixed; /* Full background */
+  /* background: url('/dj.jpg') no-repeat center center fixed; Full background */
   background-size: cover; /* Make it cover entire screen */
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;

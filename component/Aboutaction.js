@@ -16,10 +16,10 @@ const AboutSection = () => {
       </div>
 
       {/* Right Side Content */}
-      <div className="text-white"> 
+      <div className="text-black"> 
         {/* Vocal Journey */}
         <h2 className="text-4xl font-bold mb-6">Vocal Journey</h2>
-        <p className=" text-lg mb-12 leading-relaxed text-white">
+        <p className=" text-lg mb-12 leading-relaxed text-black">
           Explore the captivating portfolio of Scjha, a talented female
           singer with a unique style.
            Performed for Mithila Vikas Parishad, Kolkata on 7th July 2024 (West Bengal).
@@ -29,7 +29,7 @@ const AboutSection = () => {
         {/* Experience */}
         <h2 className="text-4xl font-bold mb-6">Experience</h2>
 
-        <ul className="space-y-6  text-lg leading-relaxed text-white">
+        <ul className="space-y-6  text-lg leading-relaxed text-black">
           
           
           <li>

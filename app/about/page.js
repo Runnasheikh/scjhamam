@@ -7,7 +7,7 @@ import Link from "next/link";
 export default function AboutPage() {
   return (
     <>
-    <Nav/>
+    {/* <Nav/> */}
     <main className="min-h-screen bg-gradient-to-br from-gray-900 via-black to-gray-800 text-white px-6 py-12 font-serif">
       {/* Hero Section */}
       <section className="flex flex-col items-center text-center">

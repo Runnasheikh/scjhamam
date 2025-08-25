@@ -1,26 +1,46 @@
-import AboutSection from "@/component/Aboutaction";
-import Footer from "@/component/Footer";
-import Gallery from "@/component/Gallery";
-import Middle from "@/component/Middle";
-import Nadia from "@/component/Nadia";
-import Nav from "@/component/Nav";
-import VideoTestimonial from "@/component/Videotestomonial";
-import Image from "next/image";
-import AboutPage from "./about/page";
+"use client";
 
+import { useRef } from "react";
+import Nadia from "@/component/Nadia";
+import YoutubePlaylist from "@/component/Youtubeplaylist";
+import Hero from "@/component/Hero";
+import Concert from "@/component/Concert";
+import Projects from "@/component/Projects";
+import Gallery from "@/component/Gallery";
+import AboutSection from "@/component/Aboutaction";
+import VideoTestimonial from "@/component/Videotestomonial";
+import AboutPage from "./about/page";
+import Footer from "@/component/Footer";
 
 export default function Home() {
+  // Ref for YoutubePlaylist
+  const youtubeRef = useRef(null);
+
+  // Function to scroll smoothly
+  const scrollToYoutube = () => {
+    youtubeRef.current?.scrollIntoView({ behavior: "smooth" });
+  };
+
   return (
-<div >
-{/* Navbar */}
-{/* <Nav/> */}
-<Nadia/>
-<Middle/>
-<Gallery/>
-<AboutSection/>
-<VideoTestimonial/>
-<AboutPage/>
-<Footer/>
-</div>
-);
+    <div>
+      {/* Nadia Hero Section */}
+      <Nadia scrollToYoutube={scrollToYoutube} />
+
+      {/* Other Sections */}
+      <Hero />
+
+      {/* Youtube Playlist Section */}
+      <div ref={youtubeRef}>
+        <YoutubePlaylist />
+      </div>
+
+      <Concert />
+      <Projects />
+      <Gallery />
+      {/* <AboutSection /> */}
+      <VideoTestimonial />
+      <AboutPage />
+      <Footer />
+    </div>
+  );
 }
