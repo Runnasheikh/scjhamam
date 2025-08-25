@@ -18,7 +18,7 @@ const Gallery = () => {
       <div className="max-w-6xl mx-auto text-center px-4">
         <h2 className="text-3xl text-amber-400 font-bold mb-4">Gallery Highlights</h2>
         <p className="text-gray-300 mb-12">
-          Explore Scjha Iqbal&apos;s stunning portfolio and captivating musical moments.
+          Explore Scjha stunning portfolio and captivating musical moments.
         </p>
 
         <Swiper
