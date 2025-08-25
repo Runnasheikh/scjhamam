@@ -45,7 +45,7 @@ export default function YoutubePlaylist() {
         {currentVideo ? (
           <iframe
             className="w-full h-64 md:h-full"
-            src={`https://www.youtube.com/embed/${currentVideo}?list=${playlistId}&autoplay=1`}
+            src={`https://www.youtube.com/embed/${currentVideo}?list=PLFItq-kF44e2_PwkyifK9Bq5wSUh_c_Mw&autoplay=1`}
             title="YouTube video player"
             frameBorder="0"
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
@@ -69,7 +69,7 @@ export default function YoutubePlaylist() {
               onClick={() => {
                 console.log(
                   "Iframe URL:",
-                  `https://www.youtube.com/embed/${video.id}?list=${playlistId}&autoplay=1`
+                  `https://www.youtube.com/embed/${video.id}?list=PLFItq-kF44e2_PwkyifK9Bq5wSUh_c_Mw&autoplay=1`
                 );
                 setCurrentVideo(video.id);
               }}
