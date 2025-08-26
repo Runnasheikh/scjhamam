@@ -25,7 +25,7 @@ export default function Projects() {
             publishedAt: item.snippet.publishedAt,
           }));
           setVideos(fetched);
-          setSelectedVideo(fetched[0]);
+          setSelectedVideo(fetched[0]); // autoplay first video
         } else {
           console.error("No videos found in playlist", data);
         }
@@ -37,31 +37,51 @@ export default function Projects() {
   }, [playlistId, apiKey]);
 
   return (
-    <div className="w-full min-h-screen  text-white p-6">
+    <div className="w-full min-h-screen text-white p-6">
       <h2 className="text-3xl font-bold mb-6 text-center">Show Glimpse of SCJ</h2>
 
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-        {videos.map((v) => (
-          <a
-            key={v.videoId}
-            href={`https://www.youtube.com/watch?v=${v.videoId}`}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="bg-gray-800 hover:bg-gray-700 transition-all rounded-xl shadow-lg overflow-hidden transform hover:scale-105 duration-300"
-          >
-            <img
-              src={v.thumb}
-              alt={v.title}
-              className="w-full h-48 object-cover"
-            />
-            <div className="p-4">
-              <h3 className="font-semibold text-lg line-clamp-2 mb-2">{v.title}</h3>
-              <p className="text-gray-400 text-sm">
-                {new Date(v.publishedAt).toLocaleDateString()}
-              </p>
+      <div className="flex flex-col lg:flex-row gap-6">
+        {/* 🎥 Main Video Player */}
+        {selectedVideo && (
+          <div className="flex-1">
+            <iframe
+              className="w-full aspect-video rounded-xl shadow-lg"
+              src={`https://www.youtube.com/embed/${selectedVideo.videoId}?autoplay=1`}
+              title={selectedVideo.title}
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowFullScreen
+            ></iframe>
+            <h3 className="mt-4 text-xl font-semibold">{selectedVideo.title}</h3>
+            <p className="text-gray-400 text-sm">
+              {new Date(selectedVideo.publishedAt).toLocaleDateString()}
+            </p>
+          </div>
+        )}
+
+        {/* 📺 Playlist (Sidebar) */}
+        <div className="w-full lg:w-1/3 bg-gray-900 rounded-xl shadow-lg overflow-y-auto max-h-[70vh]">
+          {videos.map((v) => (
+            <div
+              key={v.videoId}
+              className={`flex items-center gap-3 p-3 cursor-pointer hover:bg-gray-700 transition-all ${
+                selectedVideo?.videoId === v.videoId ? "bg-gray-700" : ""
+              }`}
+              onClick={() => setSelectedVideo(v)}
+            >
+              <img
+                src={v.thumb}
+                alt={v.title}
+                className="w-32 h-20 object-cover rounded-md"
+              />
+              <div className="flex flex-col">
+                <h3 className="text-sm font-semibold line-clamp-2">{v.title}</h3>
+                <p className="text-gray-400 text-xs">
+                  {new Date(v.publishedAt).toLocaleDateString()}
+                </p>
+              </div>
             </div>
-          </a>
-        ))}
+          ))}
+        </div>
       </div>
     </div>
   );
