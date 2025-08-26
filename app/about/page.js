@@ -16,7 +16,7 @@ export default function AboutPage() {
       <section className="flex flex-col items-center text-center">
         <div className="relative w-40 h-40 md:w-52 md:h-52 mb-6">
           <Image
-            src="/jha2.jpg"
+            src="/jha11.jpg"
             alt="Soni Choudhary Jha"
             fill
             className="rounded-full object-cover border-4 border-purple-500 shadow-xl"

@@ -7,7 +7,7 @@ const AboutSection = () => {
       {/* Left Side Image */}
       <div className="flex justify-center">
         <Image
-          src="/jha2.jpg" // your image in /public
+          src="/jha11.jpg" // your image in /public
           alt="Nadia Iqbal performing"
           width={500}
           height={700}

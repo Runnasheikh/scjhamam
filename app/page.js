@@ -1,4 +1,4 @@
-"use client"
+"use client";
 import { useRef } from "react";
 import Nadia from "@/component/Nadia";
 import YoutubePlaylist from "@/component/Youtubeplaylist";
@@ -8,24 +8,23 @@ import Projects from "@/component/Projects";
 import Gallery from "@/component/Gallery";
 import Footer from "@/component/Footer";
 import About2 from "@/component/About2";
+import BookMyShowPopup from "@/component/BookMyShowPopup"; // import popup
 
 export default function Home() {
   const youtubeRef = useRef(null);
-  const projectsRef = useRef(null); // <-- ref for Projects section
+  const projectsRef = useRef(null);
 
   const scrollToYoutube = () => {
     youtubeRef.current?.scrollIntoView({ behavior: "smooth" });
   };
 
   const scrollToProjects = () => {
-    projectsRef.current?.scrollIntoView({ behavior: "smooth" }); // smooth scroll to Projects
+    projectsRef.current?.scrollIntoView({ behavior: "smooth" });
   };
 
   return (
     <div>
-      {/* Nadia Hero Section */}
       <Nadia scrollToYoutube={scrollToYoutube} scrollToProjects={scrollToProjects} />
-
       <Hero />
 
       <div ref={youtubeRef}>
@@ -34,7 +33,6 @@ export default function Home() {
 
       <Concert />
 
-      {/* Projects Section */}
       <div ref={projectsRef}>
         <Projects />
       </div>
@@ -42,6 +40,9 @@ export default function Home() {
       <Gallery />
       <About2 />
       <Footer />
+
+      {/* Floating Book My Show Popup */}
+      <BookMyShowPopup />
     </div>
   );
 }
