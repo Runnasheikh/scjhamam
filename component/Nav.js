@@ -83,7 +83,7 @@ const Navbar = () => {
   const links = [
     { name: "Home", path: "/" },
     { name: "Portfolio", path: "/portfolio" },
-    { name: "India Tour", path: "/India-tour" },
+    // { name: "Show Glimpse", path: "/glimse" },
     { name: "About", path: "/about" },
     { name: "Contact", path: "/contact" },
   ];

@@ -24,7 +24,6 @@ export default function YoutubePlaylist() {
             id: item.snippet.resourceId.videoId,
             title: item.snippet.title,
             thumb: item.snippet.thumbnails.medium.url,
-            
           }));
 
           setVideos(fetchedVideos);
@@ -47,7 +46,7 @@ export default function YoutubePlaylist() {
         {currentVideo ? (
           <iframe
             className="w-full h-64 md:h-full"
-            src={`https://www.youtube.com/embed/${currentVideo}?list=${playlistId}&autoplay=1`}
+            src={`https://www.youtube.com/embed/${currentVideo}?list=${playlistId}`}
             title="YouTube video player"
             frameBorder="0"
             allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
@@ -69,10 +68,6 @@ export default function YoutubePlaylist() {
                 currentVideo === video.id ? "bg-gray-800" : ""
               }`}
               onClick={() => {
-                console.log(
-                  "Iframe URL:",
-                  `https://www.youtube.com/embed/${video.id}?list=${playlistId}&autoplay=1`
-                );
                 setCurrentVideo(video.id);
               }}
             >

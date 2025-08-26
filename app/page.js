@@ -1,5 +1,4 @@
-"use client";
-
+"use client"
 import { useRef } from "react";
 import Nadia from "@/component/Nadia";
 import YoutubePlaylist from "@/component/Youtubeplaylist";
@@ -7,39 +6,41 @@ import Hero from "@/component/Hero";
 import Concert from "@/component/Concert";
 import Projects from "@/component/Projects";
 import Gallery from "@/component/Gallery";
-
 import Footer from "@/component/Footer";
 import About2 from "@/component/About2";
 
 export default function Home() {
-  // Ref for YoutubePlaylist
   const youtubeRef = useRef(null);
+  const projectsRef = useRef(null); // <-- ref for Projects section
 
-  // Function to scroll smoothly
   const scrollToYoutube = () => {
     youtubeRef.current?.scrollIntoView({ behavior: "smooth" });
+  };
+
+  const scrollToProjects = () => {
+    projectsRef.current?.scrollIntoView({ behavior: "smooth" }); // smooth scroll to Projects
   };
 
   return (
     <div>
       {/* Nadia Hero Section */}
-      <Nadia scrollToYoutube={scrollToYoutube} />
+      <Nadia scrollToYoutube={scrollToYoutube} scrollToProjects={scrollToProjects} />
 
-      {/* Other Sections */}
       <Hero />
 
-      {/* Youtube Playlist Section */}
       <div ref={youtubeRef}>
         <YoutubePlaylist />
       </div>
 
       <Concert />
-      <Projects />
+
+      {/* Projects Section */}
+      <div ref={projectsRef}>
+        <Projects />
+      </div>
+
       <Gallery />
-      {/* <AboutSection /> */}
-      
-      {/* <AboutPage /> */}
-      <About2/>
+      <About2 />
       <Footer />
     </div>
   );

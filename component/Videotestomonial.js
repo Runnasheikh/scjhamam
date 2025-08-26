@@ -1,4 +1,4 @@
-import Image from "next/image";
+// import Image from "next/image";
 
 const reviews = [
   {
@@ -43,14 +43,14 @@ const VideoTestimonial = () => {
 
             {/* Reviewer */}
             <div className="flex flex-col items-center">
-              <Image
+              {/* <Image
                 src={review.image || "/default-avatar.png"} // ✅ fallback image
                 alt={review.name}
                 width={60}
                 height={60}
                 className="rounded-full"
-              />
-              <p className="mt-3 font-semibold">{review.name}</p>
+              /> */}
+               <p className="mt-3 font-semibold">{review.name}</p>
             </div>
           </div>
         ))}
