@@ -85,7 +85,7 @@ const Navbar = () => {
     { name: "Portfolio", path: "/portfolio" },
     { name: "India Tour", path: "/India-tour" },
     { name: "About", path: "/about" },
-    { name: "Contact", path: "/contactme" },
+    { name: "Contact", path: "/contact" },
   ];
 
   const menuVariants = {
