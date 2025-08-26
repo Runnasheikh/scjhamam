@@ -53,7 +53,7 @@ export default function Hero() {
           className="md:w-auto flex justify-center md:justify-end"
         >
           <Image
-            src="/jha11.jpg"
+            src="/jha9.jpg"
             alt="Scjha"
             width={400}
             height={400}
