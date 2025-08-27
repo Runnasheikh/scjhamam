@@ -1,7 +1,8 @@
 import Footer from '@/component/Footer'
 import Gallery from '@/component/Gallery'
 import Nav from '@/component/Nav'
-import VideoTestimonial from '@/component/Videotestomonial'
+import Reviewtestamonial from '@/component/Reviewtestamonial'
+
 import React from 'react'
 
 const Portfolio = () => {
@@ -9,7 +10,7 @@ const Portfolio = () => {
     <div>
         <Nav/>
       <Gallery/>
-      <VideoTestimonial/>
+      <Reviewtestamonial/>
       <Footer/>
     </div>
   )
