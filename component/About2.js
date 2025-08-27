@@ -3,7 +3,8 @@
 
 import Footer from "@/component/Footer";
 import Navbar from "@/component/Nav";
-import VideoTestimonial from "@/component/Videotestomonial";
+import Reviewtestamonial from "@/component/Reviewtestamonial";
+
 import Image from "next/image";
 import Link from "next/link";
 
@@ -140,7 +141,7 @@ export default function About2() {
         </div>
       </section>
     </main>
-    <VideoTestimonial/>
+    <Reviewtestamonial/>
     {/* <Footer/> */}
     </>
   );

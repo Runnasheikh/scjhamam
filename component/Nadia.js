@@ -11,15 +11,37 @@ import { usePathname } from "next/navigation";
 
 const Nadia = ({ scrollToYoutube, scrollToProjects }) => {
   const heroImages = useMemo(
-    () => [
-      "/jha2.jpg","/jha3.jpg","/jha4.jpg","/jha5.png",
-      "/jha6.jpg","/jha10.jpg","/jha14.jpg",
-      "/jha15.jpg","/jha16.jpg","/jha17.jpg",
-      "/jha20.jpg","/jha28.jpg","/jha22.jpg",
-      "/jha23.jpg","/jha24.jpg","/jha30.jpg"
-    ],
-    []
-  );
+  () => [
+    "/jhaheader/head0.png",   // ✅ First image
+    "/jhaheader/head1.jpg",
+    "/jhaheader/head2.png",
+    "/jhaheader/head3.jpg",
+    "/jhaheader/head4.jpg",
+    "/jhaheader/head5.jpg",
+    "/jhaheader/head6.jpg",
+    "/jhaheader/head7.jpg",
+    "/jhaheader/head8.jpg",
+    "/jhaheader/head9.jpg",
+    "/jhaheader/head10.jpg",
+    "/jhaheader/head11.jpg",
+    "/jhaheader/head12.png",
+    "/jhaheader/head13.jpg",
+    "/jhaheader/head14.jpg",
+    "/jhaheader/head15.jpg",
+    "/jhaheader/head16.jpg",
+    "/jhaheader/head17.jpg",
+    "/jhaheader/head18.jpg",
+    "/jhaheader/head19.jpg",
+    "/jhaheader/head20.jpg",
+    "/jhaheader/head21.jpg",
+    "/jhaheader/head22.jpg",
+    "/jhaheader/head23.jpg",
+    "/jhaheader/head24.jpg",
+    "/jhaheader/head25.jpg",
+  ],
+  []
+);
+
 
   const pathname = usePathname();
   const [mobileOpen, setMobileOpen] = useState(false);

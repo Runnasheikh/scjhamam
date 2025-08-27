@@ -3,7 +3,7 @@
 
 import Footer from "@/component/Footer";
 import Navbar from "@/component/Nav";
-import VideoTestimonial from "@/component/Videotestomonial";
+import VideoTestimonial from "@/component/Reviewtestamonial";
 import Image from "next/image";
 import Link from "next/link";
 

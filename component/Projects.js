@@ -46,9 +46,9 @@ export default function Projects() {
           <div className="flex-1">
             <iframe
               className="w-full aspect-video rounded-xl shadow-lg"
-              src={`https://www.youtube.com/embed/${selectedVideo.videoId}?autoplay=1`}
+              src={`https://www.youtube.com/embed/${selectedVideo.videoId}`}
               title={selectedVideo.title}
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allow="accelerometer; ; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
               allowFullScreen
             ></iframe>
             <h3 className="mt-4 text-xl font-semibold">{selectedVideo.title}</h3>
