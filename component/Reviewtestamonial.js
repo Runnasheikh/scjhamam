@@ -9,9 +9,9 @@ import "swiper/css/navigation";
 
 // Default manual reviews
 const defaultReviews = [
-  { id: "d1", name: "Kunal", text: "Scjha's voice is mesmerizing!" },
-  { id: "d2", name: "Amit", text: "Absolutely phenomenal!" },
-  { id: "d3", name: "Priya", text: "A true artist!" }
+  { _id: "d1", name: "Kunal", text: "Scjha's voice is mesmerizing!" },
+  { _id: "d2", name: "Amit", text: "Absolutely phenomenal!" },
+  { _id: "d3", name: "Priya", text: "A true artist!" }
 ];
 
 const Reviewtestamonial = ({ refreshKey }) => {
@@ -21,10 +21,10 @@ const Reviewtestamonial = ({ refreshKey }) => {
   const fetchReviews = async () => {
     try {
       const res = await fetch("/api/reviews", { cache: "no-store" });
-      if (!res.ok) throw new Error("Failed to fetch reviews");
-
       const data = await res.json();
-      setReviews([...defaultReviews, ...data]); // merge with defaults
+      if (!res.ok) throw new Error(data.error || "Failed to fetch reviews");
+
+      setReviews([...defaultReviews, ...data]); // merge default and DB reviews
     } catch (err) {
       console.error("fetchReviews error:", err);
       setReviews(defaultReviews);
@@ -35,9 +35,10 @@ const Reviewtestamonial = ({ refreshKey }) => {
   const handleDelete = async (id) => {
     try {
       const res = await fetch(`/api/reviews?id=${id}`, { method: "DELETE" });
-      if (!res.ok) throw new Error("Failed to delete review");
+      const data = await res.json();
+      if (!res.ok) throw new Error(data.error || "Failed to delete review");
 
-      setReviews(reviews.filter((r) => r.id !== id)); // remove locally
+      setReviews(reviews.filter((r) => r._id !== id)); // remove locally
     } catch (err) {
       console.error("Delete error:", err);
     }
@@ -49,12 +50,12 @@ const Reviewtestamonial = ({ refreshKey }) => {
 
   const ReviewCard = ({ review }) => (
     <div className="bg-gray-800 text-white p-8 text-center rounded-lg flex flex-col items-center relative">
-      <button
-        onClick={() => handleDelete(review.id)}
+      {/* <button
+        onClick={() => handleDelete(review._id)}
         className="absolute top-2 right-2 bg-red-500 hover:bg-red-600 text-white px-2 py-1 rounded text-sm"
       >
         Delete
-      </button>
+      </button> */}
       <div className="flex mb-4">
         {Array(5)
           .fill()
@@ -82,7 +83,7 @@ const Reviewtestamonial = ({ refreshKey }) => {
             breakpoints={{ 768: { slidesPerView: 2 }, 1024: { slidesPerView: 3 } }}
           >
             {reviews.map((review) => (
-              <SwiperSlide key={review.id}>
+              <SwiperSlide key={review._id}>
                 <ReviewCard review={review} />
               </SwiperSlide>
             ))}
@@ -90,7 +91,7 @@ const Reviewtestamonial = ({ refreshKey }) => {
         ) : (
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
             {reviews.map((review) => (
-              <ReviewCard key={review.id} review={review} />
+              <ReviewCard key={review._id} review={review} />
             ))}
           </div>
         )}

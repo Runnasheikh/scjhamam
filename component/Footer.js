@@ -24,9 +24,11 @@ const Footer = () => {
         body: JSON.stringify({ name, text }),
       });
 
-      if (!res.ok) throw new Error("Failed to save review");
+      const data = await res.json();
 
-      setMessage("Review submitted successfully! Refresh to see it.");
+      if (!res.ok) throw new Error(data.error || "Failed to save review");
+
+      setMessage("Review submitted successfully!");
       setSuccess(true);
       setName("");
       setText("");

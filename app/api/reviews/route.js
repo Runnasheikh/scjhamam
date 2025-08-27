@@ -1,34 +1,45 @@
-import { promises as fs } from "fs";
-import path from "path";
+import connect from "@/app/lib/mongodb";
+import Review from "@/app/models/review";
 
-const filePath = path.join(process.cwd(), "data", "reviews.json");
 
-// GET all reviews
 export async function GET() {
-  const data = await fs.readFile(filePath, "utf-8");
-  return new Response(data, { status: 200 });
+  try {
+    await connect();
+    const reviews = await Review.find().sort({ createdAt: -1 });
+    return new Response(JSON.stringify(reviews), { status: 200 });
+  } catch (err) {
+    console.error("GET /api/reviews error:", err);
+    return new Response(JSON.stringify({ error: "Failed to fetch reviews", details: err.message }), { status: 500 });
+  }
 }
 
-// POST new review
 export async function POST(req) {
-  const newReview = await req.json();
-  const data = JSON.parse(await fs.readFile(filePath, "utf-8"));
-  newReview.id = Date.now().toString(); // assign id
-  data.push(newReview);
-  await fs.writeFile(filePath, JSON.stringify(data, null, 2));
-  return new Response(JSON.stringify(newReview), { status: 201 });
+  try {
+    await connect();
+    const { name, text } = await req.json();
+    if (!name || !text) return new Response(JSON.stringify({ error: "Name and text required" }), { status: 400 });
+
+    const review = await Review.create({ name, text });
+    return new Response(JSON.stringify(review), { status: 201 });
+  } catch (err) {
+    console.error("POST /api/reviews error:", err);
+    return new Response(JSON.stringify({ error: "Failed to save review", details: err.message }), { status: 500 });
+  }
 }
-
-// DELETE review
 export async function DELETE(req) {
-  const { searchParams } = new URL(req.url);
-  const id = searchParams.get("id");
+  try {
+    await connect();
 
-  if (!id) return new Response("Missing id", { status: 400 });
+    const { searchParams } = new URL(req.url);
+    const id = searchParams.get("id"); // fetch sends ?id=<id>
+    if (!id) return new Response(JSON.stringify({ error: "ID required" }), { status: 400 });
 
-  const data = JSON.parse(await fs.readFile(filePath, "utf-8"));
-  const updated = data.filter((r) => r.id !== id);
+    const deleted = await Review.findByIdAndDelete(id);
+    if (!deleted) return new Response(JSON.stringify({ error: "Review not found" }), { status: 404 });
 
-  await fs.writeFile(filePath, JSON.stringify(updated, null, 2));
-  return new Response(JSON.stringify({ success: true }), { status: 200 });
+    return new Response(JSON.stringify({ message: "Deleted" }), { status: 200 });
+  } catch (err) {
+    console.error("DELETE /api/reviews error:", err);
+    return new Response(JSON.stringify({ error: "Failed to delete review", details: err.message }), { status: 500 });
+  }
 }

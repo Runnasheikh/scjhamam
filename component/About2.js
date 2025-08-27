@@ -3,10 +3,11 @@
 
 import Footer from "@/component/Footer";
 import Navbar from "@/component/Nav";
-import Reviewtestamonial from "@/component/Reviewtestamonial";
+
 
 import Image from "next/image";
 import Link from "next/link";
+import Reviewtestamonial from "./Reviewtestamonial";
 
 export default function About2() {
   return (

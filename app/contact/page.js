@@ -137,7 +137,7 @@ export default function ContactPage() {
 
             {/* WhatsApp Button */}
             <a
-              href="https://wa.me/919717553820" // 👉 replace with your WhatsApp number
+              href="https://wa.me/919101651175" // 👉 replace with your WhatsApp number
               target="_blank"
               className="flex items-center gap-2 px-6 py-3 rounded-full bg-green-600 text-white font-medium hover:bg-green-700 transition"
             >
