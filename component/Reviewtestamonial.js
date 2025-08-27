@@ -11,7 +11,7 @@ import "swiper/css/navigation";
 const defaultReviews = [
   { _id: "d1", name: "Kunal", text: "Scjha's voice is mesmerizing!" },
   { _id: "d2", name: "Amit", text: "Absolutely phenomenal!" },
-  { _id: "d3", name: "Priya", text: "A true artist!" }
+  { _id: "d3", name: "kaif", text: "A true artist!" }
 ];
 
 const Reviewtestamonial = ({ refreshKey }) => {
