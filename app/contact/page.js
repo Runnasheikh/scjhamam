@@ -28,7 +28,7 @@ export default function ContactPage() {
         alert(`✅ Your message has been sent via email to ${process.env.NEXT_PUBLIC_CONTACT_EMAIL || "our team"}. Now we will open WhatsApp for further contact.`);
 
         // Then open WhatsApp
-        const phoneNumber = "919876543210"; // replace with your WhatsApp number
+        const phoneNumber = "919717553820"; // replace with your WhatsApp number
         const whatsappURL = `https://wa.me/${phoneNumber}?text=Hello, my name is ${form.name}. My email is ${form.email}. Message: ${form.message}. Book a Show: ${form.bookShow}`;
         window.open(whatsappURL, "_blank");
 
@@ -92,9 +92,13 @@ export default function ContactPage() {
               <a href="https://www.instagram.com/soni_scjhaofficial" target="_blank" className="flex items-center gap-2 px-6 py-3 rounded-full bg-pink-600 text-white font-medium hover:bg-pink-700 transition">
                 <FaInstagram className="text-lg" /> Instagram
               </a>
-              <a href="https://wa.me/919101651175" target="_blank" className="flex items-center gap-2 px-6 py-3 rounded-full bg-green-600 text-white font-medium hover:bg-green-700 transition">
-                <FaWhatsapp className="text-lg" /> WhatsApp
-              </a>
+            <a 
+  href="whatsapp://send?phone=9717553820" 
+  className="flex items-center gap-2 px-6 py-3 rounded-full bg-green-600 text-white font-medium hover:bg-green-700 transition"
+>
+  <FaWhatsapp className="text-lg" /> WhatsApp
+</a>
+
             </div>
           </div>
         </div>
