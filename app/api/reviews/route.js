@@ -88,3 +88,10 @@ export async function DELETE(req) {
     );
   }
 }
+async function deleteReview(id) {
+  const res = await fetch(`/api/reviews?id=${id}`, {
+    method: "DELETE",
+  });
+  const data = await res.json();
+  console.log(data);
+}
