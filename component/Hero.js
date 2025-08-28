@@ -26,8 +26,7 @@ export default function Hero() {
           className="md:w-2/3 flex flex-col justify-center text-left space-y-4"
         >
           <p className="text-base sm:text-lg leading-relaxed text-gray-200">
-            Soni Choudhary Jha is an accomplished playback singer and live performer
-            with over five years of experience in both learning and performing music.
+            Soni Choudhary Jha is an accomplished playback singer and live performer.
             She has showcased her talent as a live performer in more than eight states,
             including Delhi, Punjab, Gujarat, West Bengal, Bihar, and Jharkhand.
           </p>
