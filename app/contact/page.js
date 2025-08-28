@@ -54,10 +54,10 @@ export default function ContactPage() {
                 <form onSubmit={handleSubmit} className="space-y-5">
                   <h2 className="text-3xl font-bold text-gray-800 mb-4">Get in Touch</h2>
 
-                  <InputField label="Enter your first name" name="name" value={form.name} onChange={handleChange} required />
+                  <InputField label="Enter your name" name="name" value={form.name} onChange={handleChange} required />
                   <InputField label="Enter your email address*" name="email" type="email" value={form.email} onChange={handleChange} required />
                   <TextareaField label="Write your message here*" name="message" value={form.message} onChange={handleChange} required />
-                  <TextareaField label="Book a Show (optional)" name="bookShow" value={form.bookShow} onChange={handleChange} />
+                  <TextareaField label="occasion" name="bookShow" value={form.bookShow} onChange={handleChange} />
 
                   <button type="submit" className="w-full py-3 rounded-full bg-gray-800 text-white font-semibold hover:bg-gray-700 transition">
                     Submit your information now
