@@ -1,10 +1,11 @@
 "use client";
 
-import { motion } from "framer-motion";
 import { useEffect, useState } from "react";
 import Image from "next/image";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation, Pagination } from "swiper/modules";
+import { motion } from "framer-motion";
+
 import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
@@ -14,12 +15,26 @@ export default function Concert() {
 
   useEffect(() => {
     const fetchImages = async () => {
-      const res = await fetch("/api/concert");
-      const data = await res.json();
-      setImages(data.images || []);
+      try {
+        const res = await fetch("/api/concert");
+        const data = await res.json();
+        console.log("Fetched images:", data.images);
+        setImages(data.images || []);
+      } catch (error) {
+        console.error("Failed to fetch images:", error);
+      }
     };
     fetchImages();
   }, []);
+
+  if (!images.length) {
+    return (
+      <section className="py-8 px-8 text-center text-white">
+        <h2 className="text-3xl font-semibold mb-6">Upcoming Concert</h2>
+        <p>Loading images...</p>
+      </section>
+    );
+  }
 
   return (
     <motion.section
@@ -39,23 +54,24 @@ export default function Concert() {
         slidesPerView={1}
         navigation
         pagination={{ clickable: true }}
+        loop={true}
         breakpoints={{
           640: { slidesPerView: 1 },
           768: { slidesPerView: 2 },
           1024: { slidesPerView: 3 },
         }}
-        loop={true}
       >
         {images.map((img, index) => (
           <SwiperSlide key={index}>
-            <div className="flex justify-center">
+            <div className="flex justify-center h-[400px] w-full">
               <Image
-                src={img.src}
-                alt={img.alt}
-                width={1200}
-                height={800}
-                className="rounded-lg object-cover w-full h-[400px]"
-              />
+  src={img.src}
+  alt={img.alt || "Concert Image"}
+  width={1200}
+  height={800}
+  className="rounded-lg w-full h-full object-cover object-center"
+/>
+
             </div>
           </SwiperSlide>
         ))}

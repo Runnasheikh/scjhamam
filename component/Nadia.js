@@ -23,7 +23,7 @@ const Nadia = ({ scrollToYoutube, scrollToProjects }) => {
     "/jhaheader/head8.jpg",
     "/jhaheader/head9.jpg",
     "/jhaheader/head10.jpg",
-    "/jhaheader/head11.jpg",
+    "/jhaheader/head1.jpg",
     "/jhaheader/head12.png",
     "/jhaheader/head13.jpg",
     "/jhaheader/head14.jpg",

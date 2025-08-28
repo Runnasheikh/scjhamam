@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import Link from "next/link"; // ✅ import Link
 import { FaInstagram, FaWhatsapp, FaEnvelope } from "react-icons/fa";
 
 const Footer = () => {
@@ -72,13 +73,20 @@ const Footer = () => {
         <div className="space-y-4">
           <h2 className="text-xl font-bold text-white">Quick Links</h2>
           <ul className="space-y-2">
-            <li><a href="#about" className="hover:underline">About</a></li>
-            <li><a href="#projects" className="hover:underline">Projects</a></li>
-            <li><a href="#contact" className="hover:underline">Contact</a></li>
-            <li><a href="#reviews" className="hover:underline">Reviews</a></li>
+            {/* ✅ Use Link for Next.js pages */}
+             <li><Link href="/" className="hover:underline">Home</Link></li>
+            {/* <li><Link href="/portfolio" className="hover:underline">Portfolio</Link></li>  */}
+            <li><Link href="/about" className="hover:underline">About</Link></li>
+            <li><Link href="/contact" className="hover:underline">Contact</Link></li>
+
+            {/* External or same-page section anchors can stay <a> */}
+            {/* <li><a href="#about" className="hover:underline">About Section</a></li> */}
+            {/* <li><a href="#projects" className="hover:underline">Projects</a></li> */}
+            {/* <li><a href="#contact" className="hover:underline">Contact Section</a></li> */}
+            <li><a href="/seereview" className="hover:underline">Reviews</a></li>
           </ul>
         </div>
-
+        
         {/* Review Form */}
         <div className="space-y-4">
           <h2 className="text-xl font-bold text-white">Leave a Review</h2>
