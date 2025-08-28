@@ -63,18 +63,22 @@ export default function About2() {
           Notable Performances
         </h2>
         <ul className="list-disc list-inside space-y-2 text-gray-200">
-          <li>
-            Performed for Viddyapati Munch, Siliguri on 8th March 2024 (West Bengal).
-          </li>
-          <li>
-            Performed for Mithila Sanskriti Vikas Samiti, Patna on 16th December 2023 (Bihar).
-          </li>
-          <li>
-            Performed for Viddyapati Munch, Lilua on 8th April 2023 (West Bengal).
-          </li>
-          <li>
-            Performed for Viddyapati Smriti Parv Samaroh, Kirari on 14th May 2022 (Delhi).
-          </li>
+         <li>
+  Viddyapati Samaroh – Patana, Delhi, Kolkata, Ludhiana, Siliguri, Surat, Vadodra
+</li>
+<li>
+  NASVI Event – Jawahar Lal Nehru Stadium, Delhi
+</li>
+<li>
+  Kamla Aarti – Bihar 
+</li>
+<li>
+  Janki Navmi – Delhi, Chandigarh
+</li>
+<li>
+  Vaidehi Samman – Patna
+</li>
+
         </ul>
       </section>
 
