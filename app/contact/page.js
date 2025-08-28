@@ -99,7 +99,7 @@ export default function ContactPage() {
   <FaWhatsapp className="text-lg" /> WhatsApp
 </a> */}
 <a 
-  href="whatsapp://send?phone=919101651175&text=Hello%20I%20want%20to%20book%20a%20show" 
+  href="whatsapp://send?phone=919717553820&text=Hello%20I%20want%20to%20book%20a%20show" 
   className="flex items-center gap-2 px-6 py-3 rounded-full bg-green-600 text-white font-medium hover:bg-green-700 transition"
 >
   <FaWhatsapp className="text-lg" /> WhatsApp
