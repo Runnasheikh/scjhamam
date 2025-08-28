@@ -2,7 +2,7 @@ import { NextResponse } from "next/server";
 
 export async function GET() {
   try {
-    const folderId = "1P3UwjG9GvMXaPaygV7jrN-f2AUNf9teC"; // new folder ID
+    const folderId = "1e1j5XUEC7ycxPDvOvVLnyVlHt-20Wohv"; // updated folder ID
     const apiKey = process.env.NEXT_PUBLIC_GD_API_KEY;
 
     const url = `https://www.googleapis.com/drive/v3/files?q='${folderId}'+in+parents&key=${apiKey}&fields=files(id,name,mimeType)`;
