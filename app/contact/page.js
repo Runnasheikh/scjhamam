@@ -85,19 +85,22 @@ export default function ContactPage() {
 
             <div className="space-y-2">
               <p className="font-semibold text-gray-800">Email</p>
-              <p className="text-gray-600">{process.env.NEXT_PUBLIC_CONTACT_EMAIL || "scjha@gmail.com"}</p>
+              <p className="text-gray-600">{process.env.NEXT_PUBLIC_CONTACT_EMAIL || "contact23@gmail.com"}</p>
             </div>
 
             <div className="flex items-center justify-center gap-6 mt-6">
               <a href="https://www.instagram.com/soni_scjhaofficial" target="_blank" className="flex items-center gap-2 px-6 py-3 rounded-full bg-pink-600 text-white font-medium hover:bg-pink-700 transition">
                 <FaInstagram className="text-lg" /> Instagram
               </a>
-            <a 
-  href="whatsapp://send?phone=9717553820" 
+           <a 
+  href="https://wa.me/919717553820?text=Hello%20I%20want%20to%20book%20a%20show" 
+  target="_blank"
+  rel="noopener noreferrer"
   className="flex items-center gap-2 px-6 py-3 rounded-full bg-green-600 text-white font-medium hover:bg-green-700 transition"
 >
   <FaWhatsapp className="text-lg" /> WhatsApp
 </a>
+
 
             </div>
           </div>

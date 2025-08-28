@@ -50,8 +50,8 @@ const Footer = () => {
           <div className="space-y-2">
             <div className="flex items-center gap-2">
               <FaEnvelope className="text-lg text-red-500" />
-              <a href="mailto:sonichoudharyjha@gmail.com" className="hover:underline">
-                sonichoudharyjha@gmail.com
+              <a href="mailto:contactscjha23@gmail.com" className="hover:underline">
+                contactscjha23@gmail.com
               </a>
             </div>
             <div className="flex items-center gap-2">
@@ -63,7 +63,7 @@ const Footer = () => {
             <div className="flex items-center gap-2">
               <FaInstagram className="text-lg text-pink-500" />
               <a href="https://www.instagram.com/soni_scjhaofficial" target="_blank" className="hover:underline">
-                @soni_scjhaofficial
+                @contactscjha23@gmail.com
               </a>
             </div>
           </div>
