@@ -92,10 +92,14 @@ export default function ContactPage() {
               <a href="https://www.instagram.com/soni_scjhaofficial" target="_blank" className="flex items-center gap-2 px-6 py-3 rounded-full bg-pink-600 text-white font-medium hover:bg-pink-700 transition">
                 <FaInstagram className="text-lg" /> Instagram
               </a>
-           <a 
-  href="https://wa.me/919717553820?text=Hello%20I%20want%20to%20book%20a%20show" 
-  target="_blank"
-  rel="noopener noreferrer"
+            {/* <a 
+  href="whatsapp://send?phone=9717553820" 
+  className="flex items-center gap-2 px-6 py-3 rounded-full bg-green-600 text-white font-medium hover:bg-green-700 transition"
+>
+  <FaWhatsapp className="text-lg" /> WhatsApp
+</a> */}
+<a 
+  href="whatsapp://send?phone=919101651175&text=Hello%20I%20want%20to%20book%20a%20show" 
   className="flex items-center gap-2 px-6 py-3 rounded-full bg-green-600 text-white font-medium hover:bg-green-700 transition"
 >
   <FaWhatsapp className="text-lg" /> WhatsApp
