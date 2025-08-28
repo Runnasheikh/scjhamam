@@ -60,13 +60,13 @@ export default function AboutPage() {
             Notable Performances
           </h2>
           <ul className="list-disc list-inside space-y-2 text-gray-200">
-  <li>Viddyapati Samaroh – Patna, Delhi, Kolkata, Ludhiana, Siliguri, Surat, Vadodra (2024)</li>
-  <li>Mithila Sanskriti Vikas Samiti – Patna (2023)</li>
-  <li>Viddyapati Smriti Parv Samaroh – Delhi (2022)</li>
-  <li>NASVI Event – Jawahar Lal Nehru Stadium, Delhi (2023)</li>
-  <li>Kamla Aarti – Bihar (2023)</li>
-  <li>Janki Navmi – Delhi, Chandigarh (2024)</li>
-  <li>Vaidehi Samman – Patna (2023)</li>
+  <li>Viddyapati Samaroh  Patna, Delhi, Kolkata, Ludhiana, Siliguri, Surat, Vadodra </li>
+  <li>Mithila Sanskriti Vikas Samiti  Patna </li>
+  <li>Viddyapati Smriti Parv Samaroh  Delhi </li>
+  <li>NASVI Event  Jawahar Lal Nehru Stadium, Delhi</li>
+  <li>Kamla Aarti  Bihar </li>
+  <li>Janki Navmi  Delhi, Chandigarh </li>
+  <li>Vaidehi Samman  Patna (2023)</li>
 </ul>
 
         </section>
