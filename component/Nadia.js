@@ -191,9 +191,12 @@ const Nadia = ({ scrollToYoutube, scrollToProjects }) => {
 
         {/* Hero Section */}
         {/* Hero Section */}
+{/* Hero Section */}
 <section id="home" className="relative">
   <Carousel images={heroImages} height="h-[72vh] sm:h-[80vh]" />
-  <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-black/10" />
+
+  {/* No heavy overlay - keep image dominant */}
+  <div className="absolute inset-0 bg-black/10" /> {/* optional: tiny dark tint */}
 
   {/* Text overlay */}
   <div className="absolute inset-0 flex flex-col justify-end items-center text-center px-4 pb-24 sm:pb-32">
@@ -201,16 +204,16 @@ const Nadia = ({ scrollToYoutube, scrollToProjects }) => {
       initial={{ opacity: 0, y: 20 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.8 }}
-      className="max-w-3xl text-white"
+      className="max-w-3xl"
     >
-      <h1 className="text-2xl sm:text-4xl font-extrabold leading-tight drop-shadow-md">
+      <h1 className="text-2xl sm:text-4xl font-extrabold leading-tight text-white/60">
         SCJha: Captivating Rising Star
       </h1>
-      <p className="mt-3 text-xs sm:text-sm opacity-90">
+      <p className="mt-3 text-xs sm:text-sm text-black/80">
         SONI CHOUDHARY JHA - Playback Singer / Live Performer
       </p>
       <div className="flex justify-center space-x-6 mt-4">
-        <button className="px-6 py-2 border border-white rounded-full hover:bg-white hover:text-black transition">
+        <button className="px-6 py-2 border border-white/30 text-white/30 rounded-full hover:bg-white/20 hover:text-black transition">
           <a
             href="https://www.instagram.com/soni_scjhaofficial/?igsh=cDJ5MmJ1eXh5bXk5&utm_source=qr#"
             target="_blank"
@@ -221,7 +224,7 @@ const Nadia = ({ scrollToYoutube, scrollToProjects }) => {
         </button>
         <button
           onClick={scrollToYoutube}
-          className="px-6 py-2 border border-white rounded-full hover:bg-white hover:text-black transition"
+          className="px-6 py-2 border border-white/90 text-white/70 rounded-full hover:bg-white/70 hover:text-black transition"
         >
           Listen
         </button>
@@ -229,6 +232,7 @@ const Nadia = ({ scrollToYoutube, scrollToProjects }) => {
     </motion.div>
   </div>
 </section>
+
 
       </main>
     </>
