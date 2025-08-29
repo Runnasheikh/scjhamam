@@ -75,7 +75,7 @@ import { SiSpotify } from "react-icons/si";
 import { HiMenu, HiX } from "react-icons/hi"; 
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-
+import Image from "next/image";
 const Navbar = () => {
   const pathname = usePathname();
   const [mobileOpen, setMobileOpen] = useState(false);
@@ -102,11 +102,18 @@ const Navbar = () => {
       <nav className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 h-14 flex items-center justify-between">
         
         {/* Logo */}
-        <div className="flex items-center gap-3">
-          <div className="h-8 w-8 rounded-full bg-black text-white grid place-items-center font-black">
-            Scjha
-          </div>
-        </div>
+       <div className="flex items-center gap-3">
+              <Link href="/">
+                <Image
+                  src="/jha/navimage.png"   // 🔥 put your uploaded logo path here
+                  alt="SCJha Logo"
+                  width={40}
+                  height={40}
+                  className="object-contain rounded-full"
+                  priority
+                />
+              </Link>
+            </div>
 
         {/* Desktop links */}
         <ul className="hidden sm:flex items-center gap-6 text-sm">
