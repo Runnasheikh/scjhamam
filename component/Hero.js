@@ -22,7 +22,7 @@ export default function Hero() {
           animate={{ x: 0, opacity: 1 }}
           transition={{ duration: 0.8 }}
           className="text-4xl sm:text-5xl font-extrabold mb-8 text-center md:text-left 
-                     bg-gradient-to-r from-cyan-400 via-pink-400 to-purple-500 bg-clip-text text-transparent drop-shadow-[0_0_12px_rgba(0,255,255,0.7)]"
+        bg-gradient-to-r from-cyan-400 via-pink-400 to-purple-500 bg-clip-text text-transparent drop-shadow-[0_0_12px_rgba(0,255,255,0.7)]"
         >
           A Rising Star: SCJha
         </motion.h1>

@@ -8,6 +8,7 @@ import { HiMenu, HiX } from "react-icons/hi";
 import Link from "next/link";
 import Carousel from "./Carousel"; 
 import { usePathname } from "next/navigation";
+import Image from "next/image";
 
 const Nadia = ({ scrollToYoutube, scrollToProjects }) => {
   const heroImages = useMemo(
@@ -74,10 +75,17 @@ const Nadia = ({ scrollToYoutube, scrollToProjects }) => {
         {/* Navbar */}
         <header className="sticky top-0 z-50 backdrop-blur bg-white/60 border-b">
           <nav className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 h-14 flex items-center justify-between">
-            <div className="flex items-center gap-3">
-              <div className="h-8 w-8 rounded-full bg-black text-white grid place-items-center font-black">
-                Scjha
-              </div>
+             <div className="flex items-center gap-3">
+              <Link href="/">
+                <Image
+                  src="/jha/navimage.png"   // 🔥 put your uploaded logo path here
+                  alt="SCJha Logo"
+                  width={40}
+                  height={40}
+                  className="object-contain rounded-full"
+                  priority
+                />
+              </Link>
             </div>
 
             {/* Desktop links */}
@@ -182,44 +190,46 @@ const Nadia = ({ scrollToYoutube, scrollToProjects }) => {
         </header>
 
         {/* Hero Section */}
-        <section id="home" className="relative">
-          <Carousel images={heroImages} height="h-[72vh] sm:h-[80vh]" />
-          <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-black/10" />
+        {/* Hero Section */}
+<section id="home" className="relative">
+  <Carousel images={heroImages} height="h-[72vh] sm:h-[80vh]" />
+  <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-black/10" />
 
-          {/* Text overlay */}
-          <div className="absolute inset-0 flex flex-col justify-end items-center text-center px-4 pb-16 sm:pb-24">
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
-              className="max-w-3xl text-white"
-            >
-              <h1 className="text-3xl sm:text-5xl font-extrabold leading-tight drop-shadow-md">
-                SCJha: Captivating Rising Star
-              </h1>
-              <p className="mt-3 text-sm sm:text-base opacity-90">
-                SONI CHOUDHARY JHA - Playback Singer / Live Performer
-              </p>
-              <div className="flex justify-center space-x-6 mt-4">
-                <button className="px-6 py-2 border border-white rounded-full hover:bg-white hover:text-black transition">
-                  <a
-                    href="https://www.instagram.com/soni_scjhaofficial/?igsh=cDJ5MmJ1eXh5bXk5&utm_source=qr#"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
-                    View
-                  </a>
-                </button>
-                <button
-                  onClick={scrollToYoutube}
-                  className="px-6 py-2 border border-white rounded-full hover:bg-white hover:text-black transition"
-                >
-                  Listen
-                </button>
-              </div>
-            </motion.div>
-          </div>
-        </section>
+  {/* Text overlay */}
+  <div className="absolute inset-0 flex flex-col justify-end items-center text-center px-4 pb-24 sm:pb-32">
+    <motion.div
+      initial={{ opacity: 0, y: 20 }}
+      animate={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.8 }}
+      className="max-w-3xl text-white"
+    >
+      <h1 className="text-2xl sm:text-4xl font-extrabold leading-tight drop-shadow-md">
+        SCJha: Captivating Rising Star
+      </h1>
+      <p className="mt-3 text-xs sm:text-sm opacity-90">
+        SONI CHOUDHARY JHA - Playback Singer / Live Performer
+      </p>
+      <div className="flex justify-center space-x-6 mt-4">
+        <button className="px-6 py-2 border border-white rounded-full hover:bg-white hover:text-black transition">
+          <a
+            href="https://www.instagram.com/soni_scjhaofficial/?igsh=cDJ5MmJ1eXh5bXk5&utm_source=qr#"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            View
+          </a>
+        </button>
+        <button
+          onClick={scrollToYoutube}
+          className="px-6 py-2 border border-white rounded-full hover:bg-white hover:text-black transition"
+        >
+          Listen
+        </button>
+      </div>
+    </motion.div>
+  </div>
+</section>
+
       </main>
     </>
   );
