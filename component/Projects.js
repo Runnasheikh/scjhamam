@@ -37,8 +37,9 @@ export default function Projects() {
   }, [playlistId, apiKey]);
 
   return (
-    <div className="w-full min-h-screen text-amber-400 p-6">
-      <h2 className="text-3xl font-bold mb-6 text-center">Show Glimpse of SCJ</h2>
+    <div className="w-full min-h-screen text-white">
+      <h2 className="text-4xl sm:text-5xl font-extrabold mb-8   
+                     bg-gradient-to-r from-cyan-400 via-pink-400 to-purple-500 bg-clip-text text-transparent drop-shadow-[0_0_12px_rgba(0,255,255,0.7)] text-center">Show Glimpse of SCJ</h2>
 
       <div className="flex flex-col lg:flex-row gap-6">
         {/* 🎥 Main Video Player */}

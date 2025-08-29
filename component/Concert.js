@@ -44,7 +44,10 @@ export default function Concert() {
       viewport={{ once: true }}
       className="py-8 px-8 rounded-lg text-black w-11/12 mx-auto"
     >
-      <h2 className="text-3xl font-semibold mb-6 text-center text-amber-400">
+      {/* text-4xl sm:text-5xl font-extrabold mb-8 text-center md:text-left 
+                     bg-gradient-to-r from-cyan-400 via-pink-400 to-purple-500 bg-clip-text text-transparent drop-shadow-[0_0_12px_rgba(0,255,255,0.7)] */}
+      <h2 className="text-4xl sm:text-5xl font-extrabold mb-8   
+                     bg-gradient-to-r from-cyan-400 via-pink-400 to-purple-500 bg-clip-text text-transparent drop-shadow-[0_0_12px_rgba(0,255,255,0.7)] text-center">
         Upcoming Concert
       </h2>
 
