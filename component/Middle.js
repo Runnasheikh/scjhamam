@@ -23,7 +23,7 @@ export default function Middle() {
         <div className="md:w-1/2 text-center md:text-center flex flex-col justify-center">
           <h1 className="text-4xl sm:text-5xl font-bold mb-6">A Rising Star: Scjha</h1>
           <p className="text-base sm:text-lg">
-            Soni Choudhary Jha is an accomplished playback singer and live performer
+            Soni Choudhary Jha is an 
             with over five years of experience in both learning and performing music. She
             has showcased her talent as a live performer in more than eight states,
             including Delhi, Punjab, Gujarat, West Bengal, Bihar, and Jharkhand.

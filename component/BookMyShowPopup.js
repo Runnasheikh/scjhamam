@@ -30,7 +30,7 @@ const BookMyShowPopup = () => {
     <div className="fixed top-5 right-5 z-50">
       <Link href="/contact">
         <div className="bg-gradient-to-r from-blue-600 to-indigo-600 text-white font-semibold px-5 py-3 rounded-xl shadow-lg hover:shadow-2xl hover:scale-105 transition-transform duration-300 cursor-pointer">
-          Book My Show
+          Book Show
         </div>
       </Link>
     </div>

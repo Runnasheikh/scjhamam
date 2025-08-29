@@ -44,7 +44,7 @@ export default function Concert() {
       viewport={{ once: true }}
       className="py-8 px-8 rounded-lg text-black w-11/12 mx-auto"
     >
-      <h2 className="text-3xl font-semibold mb-6 text-center text-white">
+      <h2 className="text-3xl font-semibold mb-6 text-center text-amber-400">
         Upcoming Concert
       </h2>
 
