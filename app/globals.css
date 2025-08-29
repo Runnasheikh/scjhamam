@@ -20,7 +20,7 @@
 }
 
 body {
-  background: url('/jha35.jpg') no-repeat center center fixed;
+  background: url('/wall2.jpg') no-repeat center center fixed;
   background-size: cover; /* still covers screen */
   background-position: 30% center; /* move image a bit right (default 50%) */
   color: var(--foreground);

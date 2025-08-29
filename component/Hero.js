@@ -11,9 +11,9 @@ export default function Hero() {
         initial={{ x: -200, opacity: 0 }}
         animate={{ x: 0, opacity: 1 }}
         transition={{ duration: 0.8 }}
-        className="text-4xl sm:text-5xl font-extrabold mb-8 text-center md:text-left text-gradient bg-gradient-to-r from-[#1fa37a] via-[#11624d] to-[#0f3d3c] bg-clip-text text-transparent"
+        className="text-4xl sm:text-5xl font-extrabold mb-8 text-center md:text-left text-gradient text-amber-400 bg-clip-text "
       >
-        A Rising Star: Scjha
+        A Rising Star: SCJha
       </motion.h1>
 
       {/* Flex container with text on left and image on right */}

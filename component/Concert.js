@@ -29,8 +29,8 @@ export default function Concert() {
 
   if (!images.length) {
     return (
-      <section className="py-8 px-8 text-center text-white">
-        <h2 className="text-3xl font-semibold mb-6">Upcoming Concert</h2>
+      <section className="py-8 px-8 text-center ">
+        <h2 className="text-3xl font-semibold mb-6 text-amber-400">Upcoming Concert</h2>
         <p>Loading images...</p>
       </section>
     );

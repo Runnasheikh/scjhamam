@@ -195,7 +195,7 @@ const Nadia = ({ scrollToYoutube, scrollToProjects }) => {
               className="max-w-3xl text-white"
             >
               <h1 className="text-3xl sm:text-5xl font-extrabold leading-tight drop-shadow-md">
-                Scjha: Captivating Rising Star
+                SCJha: Captivating Rising Star
               </h1>
               <p className="mt-3 text-sm sm:text-base opacity-90">
                 SONI CHOUDHARY JHA - Playback Singer / Live Performer

@@ -37,7 +37,7 @@ export default function Projects() {
   }, [playlistId, apiKey]);
 
   return (
-    <div className="w-full min-h-screen text-white p-6">
+    <div className="w-full min-h-screen text-amber-400 p-6">
       <h2 className="text-3xl font-bold mb-6 text-center">Show Glimpse of SCJ</h2>
 
       <div className="flex flex-col lg:flex-row gap-6">

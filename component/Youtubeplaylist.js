@@ -40,7 +40,7 @@ export default function YoutubePlaylist() {
   }, [playlistId, apiKey]);
 
   return (
-    <div className="flex flex-col md:flex-row h-screen bg-black text-white">
+    <div className="flex flex-col md:flex-row h-screen bg-black text-amber-400">
       {/* Video Player */}
       <div className="flex-1 w-full md:h-full flex items-center justify-center bg-black">
         {currentVideo ? (
