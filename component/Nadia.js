@@ -209,11 +209,11 @@ const Nadia = ({ scrollToYoutube, scrollToProjects }) => {
       <h1 className="text-2xl sm:text-4xl font-extrabold leading-tight text-white/60">
         SCJha: Captivating Rising Star
       </h1>
-      <p className="mt-3 text-xs sm:text-sm text-black/80">
+      <p className="mt-3 text-xs sm:text-sm text-white/80">
         SONI CHOUDHARY JHA - Playback Singer / Live Performer
       </p>
       <div className="flex justify-center space-x-6 mt-4">
-        <button className="px-6 py-2 border border-white text-white rounded-full hover:bg-white/20 hover:text-white transition">
+        <button className="px-6 py-2 border border-white/30 text-white/30 rounded-full hover:bg-white/20 hover:text-black transition">
           <a
             href="https://www.instagram.com/soni_scjhaofficial/?igsh=cDJ5MmJ1eXh5bXk5&utm_source=qr#"
             target="_blank"
