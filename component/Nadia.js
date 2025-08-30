@@ -207,12 +207,13 @@ const Nadia = ({ scrollToYoutube, scrollToProjects }) => {
       transition={{ duration: 0.8 }}
       className="max-w-3xl"
     >
-      <h1 className="text-2xl sm:text-4xl font-extrabold leading-tight text-white/60">
-        SCJha: Captivating Rising Star
-      </h1>
-      <p className="mt-3 text-xs sm:text-sm text-white/80">
-        SONI CHOUDHARY JHA - Playback Singer / Live Performer
-      </p>
+      <h1 className="text-2xl sm:text-4xl font-extrabold leading-tight shine-text glow">
+  SCJha: Captivating Rising Star
+</h1>
+<p className="mt-3 text-xs sm:text-sm shine-text glow">
+  SONI CHOUDHARY JHA - Playback Singer / Live Performer
+</p>
+
       <div className="flex justify-center space-x-6 mt-4">
         <button className="px-6 py-2 border border-white text-white rounded-full hover:bg-white/20 hover:text-black transition">
           <a

@@ -41,3 +41,42 @@ html, body {
     --foreground: #171717;
   }
 } */
+
+/* ✨ Smooth professional shine only for text */
+@keyframes shine {
+  0% {
+    transform: translateX(-150%);
+  }
+  100% {
+    transform: translateX(150%);
+  }
+}
+
+.shine-text {
+  position: relative;
+  display: inline-block;
+  color: #fff;
+  overflow: hidden;
+}
+
+.shine-text::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -150%;
+  width: 120%;
+  height: 100%;
+  background: linear-gradient(
+    120deg,
+    transparent,
+    rgba(255, 255, 255, 0.6),
+    transparent
+  );
+  animation: shine 3s ease-in-out infinite;
+}
+
+.glow {
+  text-shadow: 0 0 8px rgba(255, 255, 255, 0.6),
+               0 0 12px rgba(255, 255, 255, 0.4),
+               0 0 20px rgba(255, 200, 80, 0.3);
+}
