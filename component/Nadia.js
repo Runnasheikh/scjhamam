@@ -199,7 +199,8 @@ const Nadia = ({ scrollToYoutube, scrollToProjects }) => {
   <div className="absolute inset-0 bg-black/10" /> {/* optional: tiny dark tint */}
 
   {/* Text overlay */}
-  <div className="absolute inset-0 flex flex-col justify-end items-center text-center px-4 pb-24 sm:pb-32">
+  <div className="absolute inset-0 flex flex-col justify-end items-center text-center px-8 pb-8 sm:pb-12">
+
     <motion.div
       initial={{ opacity: 0, y: 20 }}
       animate={{ opacity: 1, y: 0 }}
@@ -213,7 +214,7 @@ const Nadia = ({ scrollToYoutube, scrollToProjects }) => {
         SONI CHOUDHARY JHA - Playback Singer / Live Performer
       </p>
       <div className="flex justify-center space-x-6 mt-4">
-        <button className="px-6 py-2 border border-white/30 text-white/30 rounded-full hover:bg-white/20 hover:text-black transition">
+        <button className="px-6 py-2 border border-white text-white rounded-full hover:bg-white/20 hover:text-black transition">
           <a
             href="https://www.instagram.com/soni_scjhaofficial/?igsh=cDJ5MmJ1eXh5bXk5&utm_source=qr#"
             target="_blank"
