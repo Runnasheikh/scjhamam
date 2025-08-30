@@ -63,7 +63,7 @@ export default function About2() {
         </h2>
         <ul className="list-disc list-inside space-y-2 text-gray-200">
          <li>
-  Viddyapati Samaroh – Patana, Delhi, Kolkata, Ludhiana, Siliguri, Surat, Vadodra
+  Viddyapati Samaroh – Patna, Delhi, Kolkata, Ludhiana, Siliguri, Surat, Vadodra
 </li>
 <li>
   NASVI Event – Jawahar Lal Nehru Stadium, Delhi

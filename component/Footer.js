@@ -63,7 +63,7 @@ const Footer = () => {
             <div className="flex items-center gap-2">
               <FaInstagram className="text-lg text-pink-500" />
               <a href="https://www.instagram.com/soni_scjhaofficial" target="_blank" className="hover:underline">
-                @contactscjha23@gmail.com
+                https://www.instagram.com/soni_scjhaofficial/
               </a>
             </div>
           </div>

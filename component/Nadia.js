@@ -115,7 +115,7 @@ const Nadia = ({ scrollToYoutube, scrollToProjects }) => {
 
             {/* Social icons */}
             <div className="flex items-center space-x-4 text-xl text-black">
-              <a href="https://www.facebook.com/yourfacebookpage" target="_blank" rel="noopener noreferrer">
+              <a href="https://www.facebook.com/scjhaofficial?mibextid=wwXIfr&rdid=4sgOvTUZulrpz3ow&share_url=https%3A%2F%2Fwww.facebook.com%2Fshare%2F15uPuZmsWp%2F%3Fmibextid%3DwwXIfr#" target="_blank" rel="noopener noreferrer">
                 <FaFacebookF className="cursor-pointer hover:text-gray-600" />
               </a>
               <a href="https://www.instagram.com/soni_scjhaofficial" target="_blank" rel="noopener noreferrer">

@@ -60,7 +60,7 @@ export default function AboutPage() {
             Notable Performances
           </h2>
           <ul className="list-disc list-inside space-y-2 text-gray-200">
-  <li>Viddyapati Samaroh - Patana,Delhi, Kolkata, Ludhiana, Siliguri, Surat, Vadodra </li>
+  <li>Viddyapati Samaroh - Patna,Delhi, Kolkata, Ludhiana, Siliguri, Surat, Vadodra </li>
   <li>NASVI Event - Jawahar Lal Nehru Stadium, Delhi
  </li>
   <li>Viddyapati Smriti Parv Samaroh  Delhi </li>
